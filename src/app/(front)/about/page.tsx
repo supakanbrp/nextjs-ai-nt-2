@@ -17,6 +17,7 @@ async function ApiVersion() {
 export default function AboutPage() {
   return (
     <main>
+      <h1>This is ToEi</h1>
       <Suspense fallback={ <AppLoading /> }>
         <ApiVersion />
       </Suspense>     
