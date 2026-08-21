@@ -9,23 +9,23 @@ export default function ContactPage() {
     <div className="flex min-h-screen justify-center px-6 py-20">
       <div className="w-full grow sm:max-w-(--breakpoint-md) lg:max-w-(--breakpoint-lg)">
         <h2 className="text-center font-medium text-4xl tracking-[-0.045em] sm:text-[2.75rem]/[1.2]">
-          ติดต่อเรา
+          Contact Us
         </h2>
         <p className="mt-3 text-pretty text-center text-lg text-muted-foreground tracking-[-0.01em] sm:text-2xl">
-          สอบถามข้อมูลเพิ่มเติมหรือติดต่อทีมงาน
+          For more information or to contact our team
         </p>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Left: contact info */}
           <section className="flex flex-col gap-8">
             <div className="space-y-6">
-              <ContactItem icon={<MapPin className="size-5" />} title="ที่อยู่">
+              <ContactItem icon={<MapPin className="size-5" />} title="Address">
                 <p className="mt-1 text-muted-foreground">
-                  123 ถนนตัวอย่าง แขวงบางรัก เขตบางรัก กรุงเทพมหานคร 10500
+                  123 Example Road, Bang Rak Subdistrict, Bang Rak District, Bangkok 10500
                 </p>
               </ContactItem>
 
-              <ContactItem icon={<Phone className="size-5" />} title="เบอร์โทร">
+              <ContactItem icon={<Phone className="size-5" />} title="Phone">
                 <p className="mt-1 text-muted-foreground">
                   <a href="tel:029999999" className="hover:text-foreground">
                     02-999-9999
@@ -33,7 +33,7 @@ export default function ContactPage() {
                 </p>
               </ContactItem>
 
-              <ContactItem icon={<Mail className="size-5" />} title="อีเมล">
+              <ContactItem icon={<Mail className="size-5" />} title="Email">
                 <p className="mt-1 text-muted-foreground">
                   <a href="mailto:contact@toei-nt.com" className="hover:text-foreground">
                     contact@toei-nt.com
@@ -41,11 +41,11 @@ export default function ContactPage() {
                 </p>
               </ContactItem>
 
-              <ContactItem icon={<Clock className="size-5" />} title="เวลาทำการ">
+              <ContactItem icon={<Clock className="size-5" />} title="Business Hours">
                 <p className="mt-1 text-muted-foreground">
-                  จันทร์ - ศุกร์ 09:00 - 18:00 น.
+                  Monday - Friday 09:00 - 18:00
                   <br />
-                  เสาร์ - อาทิตย์ 10:00 - 16:00 น.
+                  Saturday - Sunday 10:00 - 16:00
                 </p>
               </ContactItem>
             </div>
@@ -61,24 +61,24 @@ export default function ContactPage() {
 
             <div className="rounded-xl border p-6">
               <h3 className="font-medium text-xl tracking-[-0.015em]">
-                คำถามที่พบบ่อย
+                Frequently Asked Questions
               </h3>
               <dl className="mt-4 space-y-4">
                 <FaqItem
-                  q="ใช้เวลากี่วันกว่าจะได้คำตอบ?"
-                  a="เราจะตอบกลับภายใน 1-2 วันทำการ หลังได้รับข้อความของคุณ"
+                  q="How many days does it take to get a response?"
+                  a="We will reply within 1-2 business days after receiving your message"
                 />
                 <FaqItem
-                  q="รองรับการสอบถามเกี่ยวกับหลักสูตรหรือไม่?"
-                  a="ได้ เรายินดีให้คำแนะนำด้านหลักสูตรและคอร์สเรียนทั้งหมด"
+                  q="Do you support inquiries about courses?"
+                  a="Yes, we are happy to provide guidance on all our courses and programs"
                 />
                 <FaqItem
-                  q="สามารถติดต่อขอใบเสนอราคาสินค้าได้หรือไม่?"
-                  a="ได้ ส่งรายละเอียดที่ต้องการผ่านฟอร์มด้านขวา ทีมงานจะติดต่อกลับ"
+                  q="Can I request a product quotation?"
+                  a="Yes, send your requirements through the form on the right and our team will contact you back"
                 />
                 <FaqItem
-                  q="มีช่องทางติดต่ออื่นอีกไหม?"
-                  a="ได้ ติดต่อได้ผ่านอีเมล เบอร์โทร หรือช่องทาง Social ด้านบน"
+                  q="Are there other contact channels?"
+                  a="Yes, you can reach us via email, phone, or the social channels above"
                 />
               </dl>
             </div>
@@ -88,10 +88,10 @@ export default function ContactPage() {
           <section>
             <div className="rounded-xl border p-6">
               <h3 className="font-medium text-xl tracking-[-0.015em]">
-                ส่งข้อความถึงเรา
+                Send Us a Message
               </h3>
               <p className="mt-1 text-muted-foreground">
-                กรอกข้อมูลด้านล่าง แล้วเราจะติดต่อกลับโดยเร็วที่สุด
+                Fill in the information below and we will get back to you as soon as possible
               </p>
               <div className="mt-6">
                 <ContactForm />
@@ -102,7 +102,7 @@ export default function ContactPage() {
 
         <div className="mt-12 text-center">
           <Link href="/" className="underline text-muted-foreground hover:text-foreground">
-            กลับหน้าหลัก
+            Back to Home
           </Link>
         </div>
       </div>

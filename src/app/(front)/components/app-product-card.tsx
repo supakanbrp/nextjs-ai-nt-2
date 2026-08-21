@@ -11,12 +11,12 @@ export default function AppProductCard({ name, price, stock = 0, onAddToCart }: 
   return (
     <div className="w-60 border border-green-500 rounded-lg p-6 m-6 bg-amber-100">
       <h2>{name}</h2>
-      <p>ราคา: {price} บาท</p>
+      <p>Price: {price} THB</p>
       {
         stock > 0 && (
           <div>
-            <p>คงเหลือ: {stock}</p>
-            <button onClick={ () => onAddToCart(name) }>เพิ่มลงตะกร้า</button>
+            <p>In stock: {stock}</p>
+            <button onClick={ () => onAddToCart(name) }>Add to Cart</button>
           </div>
         )
       }

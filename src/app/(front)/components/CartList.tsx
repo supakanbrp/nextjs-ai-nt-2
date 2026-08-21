@@ -15,21 +15,21 @@ export default function CartList() {
   const totalPrice = useCartStore((state) => state.totalPrice());
 
   if (items.length === 0) {
-    return <div className="text-center mt-20">ตะกร้าสินค้าว่างเปล่า...</div>
+    return <div className="text-center mt-20">Your cart is empty...</div>
   }
 
   return (
     <div className="mx-auto max-w-4xl mt-20">
-      <h1 className="text-xl mb-4">ตะกร้าสินค้า</h1>
+      <h1 className="text-xl mb-4">Shopping Cart</h1>
       <Table>
         <TableHeader>
             <TableRow>
-                <TableHead>รหัสสินค้า</TableHead>
-                <TableHead>ชื่อสินค้า</TableHead>
-                <TableHead>ราคา</TableHead>
-                <TableHead>จำนวน</TableHead>
-                <TableHead>รวม</TableHead>
-                <TableHead>เครื่องมือ</TableHead>
+                <TableHead>Product ID</TableHead>
+                <TableHead>Product Name</TableHead>
+                <TableHead>Price</TableHead>
+                <TableHead>Quantity</TableHead>
+                <TableHead>Total</TableHead>
+                <TableHead>Actions</TableHead>
             </TableRow>
         </TableHeader>
         <TableBody>
@@ -54,14 +54,14 @@ export default function CartList() {
 
       <div className="text-right mt-5">
           <div className="font-bold text-2xl">
-               รวมทั้งหมด: {totalPrice.toFixed(2)}   
+               Total: {totalPrice.toFixed(2)}   
           </div>  
           <div className="m-4">
-            <Button className="mr-4" variant="outline" onClick={() => { clearCart(); } }>ลบสินค้าทั้งหมด</Button> 
+            <Button className="mr-4" variant="outline" onClick={() => { clearCart(); } }>Clear Cart</Button> 
             <Button onClick={() => { 
                 clearCart();
                 router.replace('/product');
-             } }>ยืนยันการสั่งซื้อ</Button>
+             } }>Place Order</Button>
           </div>
       </div>      
 

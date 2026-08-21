@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Logo = () => (
   <Image 
     src="/next.svg"
-    alt="โลโก้ Next.js"
+    alt="Next.js Logo"
     width={0}
     height={0}
     style={{

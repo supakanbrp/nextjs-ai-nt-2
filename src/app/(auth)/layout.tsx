@@ -19,8 +19,8 @@ export const promptFont = Prompt({
 
 
 export const metadata: Metadata = {
-  title: "ระบบ ล็อกอิน",
-  description: "เรียนรู้การเขียน Nex.tjs",
+  title: "Login System",
+  description: "Learn to build with Next.js",
 };
 
 export default function AuthLayout({
@@ -30,7 +30,7 @@ export default function AuthLayout({
 }>) {
   return (
     <html
-      lang="th"
+      lang="en"
       className={cn(promptFont.className, "font-sans", roboto.variable, loraHeading.variable)}
     >
       <body>
