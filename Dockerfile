@@ -28,6 +28,9 @@ RUN npx prisma generate
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# URL ปลอมสำหรับ build เท่านั้น (ค่าจริง inject ตอน runtime ผ่าน --env-file)
+ENV DATABASE_URL="mysql://build:build@localhost:3306/build"
+
 RUN npm run build
 
 # Stage 3: Runner
