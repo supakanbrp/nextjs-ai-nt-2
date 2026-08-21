@@ -35,7 +35,7 @@ export default function ContactPage() {
 
               <ContactItem icon={<Mail className="size-5" />} title="อีเมล">
                 <p className="mt-1 text-muted-foreground">
-                  <a href="mailto:contact@cosci.com" className="hover:text-foreground">
+                  <a href="mailto:contact@toei-nt.com" className="hover:text-foreground">
                     contact@toei-nt.com
                   </a>
                 </p>
