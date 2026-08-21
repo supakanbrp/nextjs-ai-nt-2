@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     body = await request.json();
   } catch {
     return NextResponse.json(
-      { message: "ข้อมูลไม่ถูกต้อง" },
+      { message: "Invalid data" },
       { status: 400 }
     );
   }
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
   if (!parsed.success) {
     return NextResponse.json(
       {
-        message: "ข้อมูลไม่ถูกต้อง",
+        message: "Invalid data",
         errors: parsed.error.flatten().fieldErrors,
       },
       { status: 400 }
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
 
   if (!apiKey || !from || !to) {
     return NextResponse.json(
-      { message: "ส่งข้อความไม่สำเร็จ โปรดลองอีกครั้ง" },
+      { message: "Failed to send message. Please try again" },
       { status: 500 }
     );
   }
@@ -60,14 +60,14 @@ export async function POST(request: Request) {
       from,
       to,
       replyTo: email,
-      subject: `[ติดต่อร้าน] ${subject}`,
-      text: `ชื่อ: ${name}\nอีเมล: ${email}\nหัวข้อ: ${subject}\n\n${message}`,
+      subject: `[Contact] ${subject}`,
+      text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`,
     });
 
     return NextResponse.json({ message: "success" });
   } catch {
     return NextResponse.json(
-      { message: "ส่งข้อความไม่สำเร็จ โปรดลองอีกครั้ง" },
+      { message: "Failed to send message. Please try again" },
       { status: 500 }
     );
   }

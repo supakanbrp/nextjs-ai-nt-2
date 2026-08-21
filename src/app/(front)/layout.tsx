@@ -21,8 +21,8 @@ export const promptFont = Prompt({
 
 
 export const metadata: Metadata = {
-  title: "ระบบ E-Commerce COSCI",
-  description: "เรียนรู้การเขียน Nex.tjs",
+  title: "COSCI E-Commerce System",
+  description: "Learn to build with Next.js",
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="th"
+      lang="en"
       className={cn(promptFont.className, "font-sans", roboto.variable, loraHeading.variable)}
     >
       <body>

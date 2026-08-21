@@ -3,24 +3,24 @@ import * as z from "zod";
 export const contactSchema = z.object({
   name: z
     .string()
-    .min(1, "กรุณากรอกชื่อ")
-    .min(2, "ชื่อต้องมีอย่างน้อย 2 ตัวอักษร")
-    .max(100, "ชื่อต้องไม่เกิน 100 ตัวอักษร"),
+    .min(1, "Name is required")
+    .min(2, "Name must be at least 2 characters")
+    .max(100, "Name must not exceed 100 characters"),
   email: z
     .string()
-    .min(1, "กรุณากรอกอีเมล")
-    .email("รูปแบบอีเมลไม่ถูกต้อง"),
+    .min(1, "Email is required")
+    .email("Invalid email format"),
   subject: z
     .string()
-    .min(1, "กรุณากรอกหัวข้อ")
-    .min(3, "หัวข้อต้องมีอย่างน้อย 3 ตัวอักษร")
-    .max(150, "หัวข้อต้องไม่เกิน 150 ตัวอักษร"),
+    .min(1, "Subject is required")
+    .min(3, "Subject must be at least 3 characters")
+    .max(150, "Subject must not exceed 150 characters"),
   message: z
     .string()
-    .min(1, "กรุณากรอกข้อความ")
-    .min(10, "ข้อความต้องมีอย่างน้อย 10 ตัวอักษร")
-    .max(2000, "ข้อความต้องไม่เกิน 2000 ตัวอักษร"),
-  website: z.string().max(100, "ข้อความต้องไม่เกิน 100 ตัวอักษร").optional(),
+    .min(1, "Message is required")
+    .min(10, "Message must be at least 10 characters")
+    .max(2000, "Message must not exceed 2000 characters"),
+  website: z.string().max(100, "Website must not exceed 100 characters").optional(),
 });
 
 export type ContactFormValues = z.infer<typeof contactSchema>;

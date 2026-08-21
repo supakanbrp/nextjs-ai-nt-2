@@ -10,7 +10,7 @@ const FeaturesProduct = ({ products }: Props) => {
   return (
     <div className="mx-auto flex max-w-7xl flex-col px-6 py-20">
       <h2 className="text-pretty text-center font-medium text-4xl tracking-[-0.04em] sm:text-[2.75rem]">
-        สินค้าทั้งหมด
+        All Products
       </h2>
 
       <div className="mt-16 grid grid-cols-1 gap-6 sm:mt-20 sm:grid-cols-2 lg:grid-cols-3">

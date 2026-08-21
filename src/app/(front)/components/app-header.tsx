@@ -10,10 +10,10 @@ export default function AppHeader() {
         <AppButton />
         <p>Cosci SWU</p>
         {
-          students.length > 0 ? <p>พบข้อมูลนักศึกษา</p> : <p>ไม่พบข้อมูล...</p>
+          students.length > 0 ? <p>Student data found</p> : <p>No data found...</p>
         }
         {
-          students.length > 0 && <p>นักศึกษาทั้งหมด {students.length} คน</p>
+          students.length > 0 && <p>Total students: {students.length}</p>
         }
         {
           isShow && <hr />
