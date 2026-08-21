@@ -27,8 +27,8 @@ export default function ContactPage() {
 
               <ContactItem icon={<Phone className="size-5" />} title="เบอร์โทร">
                 <p className="mt-1 text-muted-foreground">
-                  <a href="tel:021234567" className="hover:text-foreground">
-                    02-123-4567
+                  <a href="tel:029999999" className="hover:text-foreground">
+                    02-999-9999
                   </a>
                 </p>
               </ContactItem>
